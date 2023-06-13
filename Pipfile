@@ -1,0 +1,34 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pydantic = "*"
+typing = "*"
+typing-extensions = "*"
+opencv-python = "*"
+pillow = "*"
+torch = "*"
+torchvision = "*"
+torchaudio = "*"
+pandas = "*"
+psutil = "*"
+pyyaml = "*"
+tqdm = "*"
+ultralytics = "*"
+gitpython = "*"
+uvicorn = "*"
+fastapi = "*"
+tensorflow = "==2.10"
+pip = "*"
+install = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
+python_full_version = "3.10.10"
+
+[pipenv]
+allow_prereleases = true

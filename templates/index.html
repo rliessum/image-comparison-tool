@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Image Comparison</title>
+  <meta name="description" content="Compare images." />
+  <meta property="og:title" content="Image Comparison" />
+  <meta property="og:description" content="Compare images." />
+  <link rel="stylesheet" type="text/css" href="static/styles.css" />
+</head>
+
+<body class="bg-gray-800 text-white min-h-full">
+  <header class="text-center py-6 mb-8 bg-gray-900 shadow">
+    <h1 class="text-3xl font-bold">Image Comparison Tool</h1>
+    <div id="spinner" class="hidden items-center cursor-not-allowed"></div>
+  </header>
+  <main class="container mx-auto px-4 py-2">
+    <div class="py-4">
+      <div id="progress" value="0" max="100" class="bg-rainbow hidden text-center">
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 gap-4">
+      <div class="flex justify-center mr-4">
+        <form id="uploadForm" enctype="multipart/form-data">
+          <input type="file" id="fileUpload" name="files" multiple required class="hidden" accept="image/*"
+            aria-label="Select Images" />
+          <button type="button" onclick="document.getElementById('fileUpload').click()"
+            class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full mr-2">
+            Select Images
+          </button>
+
+          <button id="compareButton" type="submit"
+            class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full mr-2">
+            <span id="compareText">Compare</span>
+            <span id="compareSpinner" class="hidden flex items-center">
+              <svg class="animate-spin -ml-0.4 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                </path>
+              </svg>
+              <span class="ml-1">Processing...</span>
+            </span>
+          </button>
+        </form>
+
+        <button id="downloadButton"
+          class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full mr-2">
+          Download Results
+        </button>
+
+        <button id="downloadDone"
+          class="hidden bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full mr-2">
+          <a href="#" id="download-link">Download Ready</a>
+        </button>
+
+        <button id="autoZoomButton"
+          class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full mr-2">
+          Auto Zoom
+        </button>
+
+        <button id="postProccesFilesButton" type="submit"
+          class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full mr-2">
+          <span id="postProccesFilesText">Post Process Files</span>
+          <span id="postProccesFilesSpinner" class="hidden flex items-center">
+            <svg class="animate-spin -ml-0.4 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor"
+                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+              </path>
+            </svg>
+            <span class="ml-1">Processing...</span>
+          </span>
+        </button>
+
+
+        <button id="cleanOutputtedFilesButton"
+          class="bg-indigo-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2"
+          onclick="confirmCleanOutputtedFiles()">
+          Clean Outputted Files
+        </button>
+
+      </div>
+
+      <section>
+        <ul id="imagesSkeleton" role="list" class="grid grid-cols-4 gap-6 hidden"> </ul>
+      </section>
+
+      <section>
+        <ul id="matchedImageContainer" role="list" class="grid grid-cols-4 gap-6"> </ul>
+      </section>
+
+      <section>
+        <ul id="imageContainer" role="list" class="grid grid-cols-4 gap-6"> </ul>
+      </section>
+
+
+
+
+    </div>
+  </main>
+  <script src="static/main.js"></script>
+</body>
+
+</html>
