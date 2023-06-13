@@ -7,7 +7,7 @@ Pillow==9.5.0
 requests==2.31.0
 retina-face==0.0.13
 seaborn==0.12.2
-starlette==0.27.0
+starlette==0.28.0
 torch==2.0.1
 torchvision==0.15.2
 tqdm==4.65.0
