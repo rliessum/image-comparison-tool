@@ -49,7 +49,7 @@ nvidia-cufft-cu11==10.9.0.58 ; platform_system == 'Linux' and platform_machine =
 nvidia-curand-cu11==10.2.10.91 ; platform_system == 'Linux' and platform_machine == 'x86_64'
 nvidia-cusolver-cu11==11.4.0.1 ; platform_system == 'Linux' and platform_machine == 'x86_64'
 nvidia-cusparse-cu11==11.7.4.91 ; platform_system == 'Linux' and platform_machine == 'x86_64'
-nvidia-nccl-cu11==2.14.3 ; platform_system == 'Linux' and platform_machine == 'x86_64'
+nvidia-nccl-cu11==2.18.3 ; platform_system == 'Linux' and platform_machine == 'x86_64'
 nvidia-nvtx-cu11==11.7.91 ; platform_system == 'Linux' and platform_machine == 'x86_64'
 oauthlib==3.2.2 ; python_version >= '3.6'
 opencv-python==4.7.0.72
