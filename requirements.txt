@@ -34,7 +34,7 @@ keras-preprocessing==1.1.2
 kiwisolver==1.4.4 ; python_version >= '3.7'
 libclang==16.0.0
 lit==16.0.6
-markdown==3.4.3 ; python_version >= '3.7'
+markdown==3.4.4 ; python_version >= '3.7'
 markupsafe==2.1.3 ; python_version >= '3.7'
 matplotlib==3.7.1
 mpmath==1.3.0
