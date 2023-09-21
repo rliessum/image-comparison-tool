@@ -87,7 +87,7 @@ tensorboard==2.10.1 ; python_version >= '3.6'
 tensorboard-data-server==0.7.1 ; python_version >= '3.6'
 tensorboard-plugin-wit==1.8.1
 tensorflow==2.10
-tensorflow-estimator==2.10.0 ; python_version >= '3.7'
+tensorflow-estimator==2.14.0 ; python_version >= '3.7'
 tensorflow-io-gcs-filesystem==0.32.0 ; python_version < '3.12' and python_version >= '3.7'
 termcolor==2.3.0 ; python_version >= '3.7'
 torch==2.0.1
