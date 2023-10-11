@@ -85,4 +85,4 @@ ultralytics==8.0.190
 urllib3==2.0.6
 uvicorn==0.23.2
 Werkzeug==3.0.0
-wrapt==1.14.1
+wrapt==1.15.0
