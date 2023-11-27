@@ -73,7 +73,7 @@ tensorboard-plugin-wit==1.8.1
 tensorflow==2.14.0
 tensorflow-estimator==2.15.0
 tensorflow-io-gcs-filesystem==0.34.0
-tensorflow-macos==2.14.0
+tensorflow-macos==2.15.0
 termcolor==2.3.0
 thop==0.1.1.post2209072238
 torch==2.0.1
