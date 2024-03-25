@@ -12,7 +12,7 @@ cycler==0.12.1
 exceptiongroup==1.2.0
 fastapi==0.103.2
 filelock==3.13.1
-flatbuffers==23.5.26
+flatbuffers==24.3.7
 fonttools==4.49.0
 gast==0.5.4
 gdown==4.7.1
