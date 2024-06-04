@@ -84,5 +84,5 @@ tzdata==2024.1
 ultralytics==8.0.190
 urllib3==2.2.1
 uvicorn==0.23.2
-Werkzeug==3.0.1
+Werkzeug==3.0.3
 wrapt==1.16.0
