@@ -414,9 +414,12 @@ async def perform_auto_zoom(folder_name: str):
         dict: A dictionary containing a message indicating that the auto zoom process has completed.
     """
     logging.info(f"Running auto_zoom on {folder_name}")
-    folder_path = os.path.join("output", folder_name)
+    base_dir = "output"
+    folder_path = os.path.normpath(os.path.join(base_dir, folder_name))
+    if not folder_path.startswith(base_dir):
+        raise HTTPException(status_code=400, detail="Invalid folder name")
     images = [os.path.join(folder_path, file) for file in os.listdir(folder_path)]
-    output_base_dir = os.path.join("output", f"{folder_name}_auto_zoom")
+    output_base_dir = os.path.join(base_dir, f"{folder_name}_auto_zoom")
     os.makedirs(output_base_dir, exist_ok=True)
     auto_zoom(images, output_base_dir)
     return {"message": "Auto Zoom completed"}
