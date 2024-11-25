@@ -82,7 +82,7 @@ tqdm==4.66.1
 typing_extensions==4.8.0
 tzdata==2024.1
 ultralytics==8.0.190
-urllib3==2.2.1
+urllib3==2.2.3
 uvicorn==0.23.2
 Werkzeug==3.0.6
 wrapt==1.16.0
